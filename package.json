@@ -1,0 +1,26 @@
+{
+    "name": "bored-activity-finder",
+    "version": "1.0.0",
+    "description": "A website that suggests activities to do when you are bored.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node ./bin/web"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jpw547/bored-activity-finder.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/jpw547/bored-activity-finder/issues"
+    },
+    "homepage": "https://github.com/jpw547/bored-activity-finder#readme",
+    "dependencies": {
+        "axios": "^0.19.0",
+        "cookie-parser": "^1.4.4",
+        "express": "^4.17.1",
+        "morgan": "^1.9.1",
+        "serve-favicon": "^2.5.0"
+    }
+}

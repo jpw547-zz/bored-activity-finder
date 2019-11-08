@@ -1,0 +1,231 @@
+body {
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #e8eaed;
+}
+
+.header {
+    font: 500 20px/32px Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 16px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    height: 64px;
+    background: #1565c0;
+    color: #fff;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+}
+
+.footer {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    padding: 7px;
+    flex-shrink: 0;
+    background-color: #ffffff !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+}
+
+.footer-text {
+    color: #050505;
+    text-decoration: none;
+}
+
+.bored-button {
+    background-color: #3949ab;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 20px;
+    width: 240px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    height: 20%;
+}
+
+.activity-card {
+    height: 40%;
+    width: 40%;
+    background-color: #ffffff;
+    border-radius: 2px;
+    margin: auto;
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+    animation: createBox .5s;
+    padding: 4px;
+}
+
+.title {
+    font-size: 18pt;
+    padding: 14px;
+    text-align: center;
+}
+
+@keyframes createBox {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.divider {
+    display: block;
+    margin: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgba(0, 0, 0, .12);
+}
+
+.text-field {
+    padding: 10px;
+    font-size: 14pt;
+    color: #5a5a5a;
+}
+
+.type {
+    padding: 10px;
+    font-size: 14pt;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 80%;
+}
+
+.grid-item {
+    /* border: solid 1px green; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 4px;
+}
+
+.access-bar {
+    width: 80%;
+    height: 20px;
+    background-color: #dddddd;
+}
+
+.progress {
+    background-color: #56ad44;
+}
+
+.lowAccess {
+    background-color: #56ad44;
+    color: white;
+    font-size: 14pt;
+    font-weight: 500;
+    width: 60px;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+.medAccess {
+    background-color: #ffc107;
+    color: black;
+    font-size: 14pt;
+    font-weight: 500;
+    min-width: 60px;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+.highAccess {
+    background-color: #b71c1c;
+    color: white;
+    font-size: 14pt;
+    font-weight: 500;
+    width: 60px;
+    text-align: center;
+    padding: 6px 10px;
+    border-radius: 10px;
+}
+
+.people {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    transform: scale(1.5);
+}
+
+.greenMoney {
+    filter: invert(53%) sepia(21%) saturate(1128%) hue-rotate(73deg) brightness(94%) contrast(95%);
+}
+
+.noMoney {
+    filter: invert(99%) sepia(39%) saturate(1934%) hue-rotate(186deg) brightness(129%) contrast(76%);
+}
+
+@media (max-width: 768px) {
+    .row {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 5px;
+        height: 15%;
+    }
+    .activity-card {
+        height: 60%;
+        width: 85%;
+        background-color: #ffffff;
+        border-radius: 2px;
+        margin: auto;
+        box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 1px 3px 0 rgba(0, 0, 0, .12);
+        animation: createBox .5s;
+        padding: 4px;
+    }
+    .title {
+        font-size: 16pt;
+        padding: 14px;
+        text-align: center;
+    }
+    .text-field {
+        padding: 5px;
+        font-size: 12pt;
+        color: #5a5a5a;
+    }
+    .type {
+        padding: 5px;
+        font-size: 12pt;
+    }
+}

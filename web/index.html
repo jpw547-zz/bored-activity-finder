@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Activity Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="icon" href="favicon.ico?v=1.1">
+</head>
+
+<body>
+    <div id="app" class="base">
+        <div class="header">
+            Activity Finder
+        </div>
+        <div class="row">
+            <button v-on:click="getActivity" class="bored-button">I'm Bored!</button>
+        </div>
+        <div v-if="loaded" class="activity-card">
+            <div class="title">{{current.activity}}</div>
+            <div class="divider"></div>
+            <div class="grid">
+                <div class="grid-item">
+                    <div class="text-field">Accessibility Level:</div>
+                    <div class="access" id="accessLabel" v-bind:class="{ lowAccess: low, medAccess: medium, highAccess: high }">{{accessibility}}</div>
+                </div>
+                <div class="grid-item">
+                    <div class="text-field">Type:</div>
+                    <div class="type" style="text-transform: capitalize;">{{activityType(current.type)}}</div>
+                </div>
+                <div class="grid-item">
+                    <div class="text-field">{{fullWords ? 'Suggested # of Participants:' : '# Participants:'}}</div>
+                    <div class="people">
+                        <img src="./images/person-24px.svg">
+                        <span>x {{current.participants}}</span>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <div class="text-field">Price:</div>
+                    <div>
+                        <template v-for="(p, index) in 5">
+                                <img class="dollar-icon" src="images/icons8-us-dollar-24.png" v-bind:class="{ greenMoney: index <= priceCount, noMoney: index > priceCount }">
+                        </template>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <a class="footer-text" href="https://github.com/jpw547/bored-activity-finder" target="_blank">Github</a>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./script.js"></script>
+
+</html>
